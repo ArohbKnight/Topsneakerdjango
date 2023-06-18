@@ -1,0 +1,40 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} contacto {% endblock %}
+
+
+
+{% block relleno %}
+   <div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5" style="position:relative; top:70px;">
+     <div class="row align-items-stretch">
+       
+         
+         <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> ¿Deseas contactarnos? </h1>
+          <h3>Envianos tu mensaje</h3>
+         <form action="#">
+          <div class="mb-1">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control"  id="nombre">
+         </div>
+            <div class="mb-1">
+              <label for="correo" class="form-label">Correo electronico</label>
+              <input type="text" class="form-control" id="correo" name="correo">
+           </div>
+           <div class="mb-1">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <input type="text" class="form-control" id="mensaje" name="mensaje">
+         </div>
+             <br>
+               <div class="d-grid">
+                <input type="submit" onclick=" return Enviar();" value="Enviar mensaje"> 
+               </div>
+         </form>
+
+        </div>
+        
+     </div>
+   
+   {% endblock %}
+    <script src="{% static 'menu/js/validaciones.js'%}"></script>
+   

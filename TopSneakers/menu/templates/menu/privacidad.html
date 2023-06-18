@@ -1,0 +1,55 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} privacidad {% endblock %}
+
+
+
+{% block relleno %}
+      <div class="container">
+      <div class="card text-center" style="position:relative; top:150px; ">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item"> 
+              <a class="nav-link a1 " href="{% url 'perfil'%}">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a1" href="{% url 'privacidad'%}">Privacidad y seguridad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link a1" href="{% url 'histoordenes'%}">Historial de ordenes</a>
+              </li>
+
+          </ul>
+        </div>
+        <div class="card-body">
+          <form> 
+            <div class="mb-1"> <h2>Privacidad y seguridad</h2>
+              <label for="correo" class="form-label">Correo</label>
+              <input type="text" class="form-control" id="correo">
+           </div>
+                <div class="mb-1">
+                  <label for="contraseñaac" class="form-label">Contraseña actual </label>
+                  <input type="text" class="form-control"  id="contraseñaac">
+               </div>
+               <div class="mb-1">
+                <label for="contraseñan" class="form-label">Nueva contraseña </label>
+                <input type="text" class="form-control"  id="contraseñan">
+             </div>
+             <div class="mb-1">
+              <label for="contraseñac" class="form-label">Confirmar contraseña</label>
+              <input type="text" class="form-control"  id="contraseñac">
+           </div>
+                <br> 
+                <input type="submit" onclick=" return confirmarpriv();" value="Confirmar">
+            </form>
+      </div>
+
+      
+          
+    </div>
+  </div>
+    {% endblock %}
+    <script src="{% static 'menu/js/validaciones.js'%}"></script>
+    
+    

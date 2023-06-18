@@ -1,0 +1,66 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} historialordenes {% endblock %}
+
+
+
+{% block relleno %}
+      <div class="container cont-tam3">
+      <div class="row">
+      <div class="card mejor" >
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item"> 
+              <a class="nav-link a1 " href="{% url 'perfil'%}">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a1" href="{% url 'privacidad'%}">Privacidad y seguridad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link a1" href="{% url 'histoordenes'%}">Historial de ordenes</a>
+              </li>
+
+          </ul>
+        </div>
+          <h2>Historial de ordenes</h2>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>air jordan 1 mid</td>
+                    <td>$102.000</td>
+                    <td>10-04-2023</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Lebron soldier</td>
+                    <td>$221.00</td>
+                    <td>01-02-2023</td>
+                  </tr>
+                       <tr>
+                        <th scope="row">3</th>
+                        <td>Dunk low</td>
+                        <td>$119.00</td>
+                        <td>23-03-2023</td>
+                      </tr>
+                  
+                </tbody>
+              </table>
+      </div>
+    </div>
+  </div>
+  </div>
+  {% endblock %}   
+    
+    
+    

@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iniciosesion.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <title>Perfil</title>
+
+
+
+</head>
+<body>
+              <!-- menu -->
+              <nav class="navbar navbar-expand-md navbar-light  fixed-top">
+                <div class="container container-color ">
+                  <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+                          
+                         
+                  </a>
+                  
+                  <button class="navbar-toggler " 
+                   data-bs-toggle="collapse" 
+                   data-bs-target="#mainNav" 
+                   aria-controls="mainNav"
+                   aria-expanded="false" 
+                   aria-label="toggle navigation">
+                          <span style="color: rgb(173, 6, 6);" class="icon-menu "></span>
+                  </button>
+                 <div class="collapse navbar-collapse " id="mainNav">
+                          <ul class="navbar-nav ms-auto mb-2 mb-md-0 "style="position: relative;">
+                                  <li >
+                                          
+                                          <div class="buscar">
+                                                  <input type="text" placeholder="Buscar" required />
+                                            
+                                                  <div class="btn btn-1">
+                                                    <i  class="fas fa-search icon-search "></i>
+                                                  </div>
+                                          </div>                  
+                                  </li>
+                                  <li>
+                                          <div>
+                                                  <a href="carritoadmin.html" class="nav-link a1 " ><img src="img/carrito.png" alt="carrito" height="15px" width="20px"></i></a>
+                                          </div>
+                                 </li> 
+                                  <li >
+                                           <a href="inicioadmin.html" class="nav-link a1">INICIO</a>
+                                  </li>
+                                  <li >
+                                          <a href="productosadmin.html" class="nav-link a1">PRODUCTOS</a>
+                                          
+                                 </li>
+                                 <li >
+                                           <a href="contactosadmin.html" class="nav-link a1">CONTACTO</a>
+                                                  
+                                  </li> 
+                                  <li >
+                                          <a href="sobrenosotrosadmin.html" class="nav-link a1">SOBRE NOSOTROS</a>
+                                 </li>  
+                                            
+                                 <li>             
+                                          <div>
+                                                <a href="perfiladmin.html" class="nav-link a1">CUENTA</a>  
+                                          </div>
+                                 </li>
+                                 <li>             
+                                   <div>
+                                         <a href="menuadmin.html" class="nav-link a1">ADMIN</a>  
+                                   </div>  
+                          </ul>
+                
+               
+                  </div>
+                </div>
+          </nav>
+    <!-- menu -->
+      <div class="container">
+      <div class="card text-center" style="position:relative; top:150px; ">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link " href="perfil.html">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="privacidad.html">Privacidad y seguridad</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="histoordenes.html">Historial de ordenes</a>
+              </li>
+
+
+          </ul>
+        </div>
+        <div class="card-body">
+          <form> 
+            <div class="mb-1"> <h2>Mi cuenta</h2>
+              <label for="rut" class="form-label">Rut</label>
+              <input type="text" class="form-control" id="rut">
+           </div>
+                <div class="mb-1">
+                  <label for="nombre" class="form-label">Nombre </label>
+                  <input type="text" class="form-control"  id="nombre">
+               </div>
+               <div class="mb-1">
+                <label for="apellido" class="form-label">Apellido </label>
+                <input type="text" class="form-control"  id="apellido">
+             </div>
+                <br> 
+                <input type="submit" onclick=" return confirmar();" value="Confirmar">
+            </form>
+      </div>
+      
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+    <script src="js/validaciones.js"></script>
+    <footer class=" text-lg-start">
+                
+      <div class="container-fluid p-4 cont-foot">
+        
+        <div class="row">
+          
+          <div class="col-sm-12 mb-4 mb-md-0 colorin">
+            <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+    
+            <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+              MENSAJES DE LOS CREADORES:
+              <br>
+              SIGAN EN TWITCH :
+              <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+              <br>
+              CRISTOBAL: Xd
+              <br>
+              SEBA: Borrenme el lol porfavor
+            </p>
+          
+          
+      </div>
+    
+      
+      <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+        © 2023 Copyright :
+        <br>
+        <a href="test.html" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+              
+             
+        </a>
+      </div>
+      </div>
+       
+      </div>   
+</footer>      
+    </body>
+    </html>
+    

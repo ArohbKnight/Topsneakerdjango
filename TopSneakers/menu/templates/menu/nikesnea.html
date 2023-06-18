@@ -1,0 +1,56 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} nike {% endblock %}
+
+
+
+{% block relleno %}
+<div class="container-fluid dist">
+  <div class="row row-cols-1 row-cols-md-4 g-4" style="position:relative; top:150px; "> 
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+       <a href="{% url 'airforce'%}"> <img src="{% static 'menu/img/airfoce1.png'%}" class="card-img-top" alt="..."> </a>
+        <div class="card-body">
+          <h5 class="card-title"id-data="1">Nike air force 1</h5>
+          <p class="card-text" id="price">126.990</p>
+          <p class="card-text" >El fulgor vive en el Nike Air Force 1 07, el modelo original de básquetbol que da un toque novedoso a las características más recordadas: revestimientos con costuras duraderas, acabados impecables.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1" id="btn-add">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'jordanair1mid'%}"><img src="{% static 'menu/img/AIR JODAN 1 MID.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Jordan AIR 1 mid</h5>
+          <p class="card-text">$102.000<br>Jordar air 1 mid, inspirada en el AJ1 original, esta edición de corte mid mantiene el look icónico que te encanta, y los colores selectos y el cuero impecable le dan una identidad distintiva.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+      <a href="{% url 'jordansmoke'%}"> <img src="{% static 'menu/img/jordan gris.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Jordan 1 mid light smoke</h5>
+          <p class="card-text">$170.000<br>El zapato cuenta con una puntera perforada, una parte superior suave de cuero con inserciones blancas sucesivas en la zona inferior y un tobillo con inserciones grises en el resto del zapato.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+      <a href="{% url 'stayloyal'%}"><img src="{% static 'menu/img/stay loyal 2.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Jordan stay loyal 2</h5>
+          <p class="card-text">$132.900<br>Inspirado en generaciones de Jordan, este calzado es un collage de frescura. Los detalles de diseño recuperan décadas de calzado legendarias y rinden homenaje a la mítica carrera de MJ.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  {% endblock %}
+    

@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo%} {% endblock %} </title>
+    
+    <link rel="stylesheet" href="{% static 'menu/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'menu/css/estilo.css'%}">
+    <link rel="stylesheet" href="{% static 'menu/css/fontello.css'%}">
+    
+</head>
+<body>
+<!-- MENU -->
+<nav class="navbar navbar-expand-md navbar-light  fixed-top">
+    <div class="container container-color sm-12 md-12 lg-6 xl-6 ">
+      <a href="{% url 'test'%}" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="{% static 'menu/img/iconozapa.png' %}" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+              
+             
+      </a>
+      
+      <button class="navbar-toggler " 
+       data-bs-toggle="collapse" 
+       data-bs-target="#mainNav" 
+       aria-controls="mainNav"
+       aria-expanded="false" 
+       aria-label="toggle navigation">
+              <span style="color: rgb(173, 6, 6);" class="icon-menu "></span>
+      </button>
+     <div class="collapse navbar-collapse " id="mainNav">
+              <ul class="navbar-nav ms-auto mb-2 mb-md-0 "style="position: relative;">
+                      <li >
+                              
+                              <div class="buscar">
+                                      <input type="text" placeholder="Buscar" required />
+                                
+                                      <div class="btn btn-1">
+                                        <i  class="fas fa-search icon-search "></i>
+                                      </div>
+                              </div>                  
+                      </li>
+                      <li>
+                              <div>
+                                      
+                                      <a href="{% url 'test'%}" class="nav-link a1 " ><img src="{% static 'menu/img/carrito.png' %}" alt="carrito" height="15px" width="20px"></i></a>
+                                  
+                              </div>
+                     </li> 
+                      <li >
+                               <a href="{% url 'test'%}" class="nav-link a1">INICIO</a>
+                      </li>
+                      <li >
+                              <a href="{% url 'productos'%}" class="nav-link a1">PRODUCTOS</a>
+                              
+                     </li>
+                     <li >
+                               <a href="{% url 'contactanos'%}" class="nav-link a1">CONTACTO</a>
+                                      
+                      </li> 
+                      <li >
+                              <a href="{% url 'sobrenosotros'%}" class="nav-link a1">SOBRE NOSOTROS</a>
+                     </li>  
+                                
+                     <li>             
+                              <div>
+                                    <a href="{% url 'perfil'%}" class="nav-link a1">CUENTA</a>  
+                              </div>
+                     </li>  
+              </ul>
+    
+   
+      </div>
+    </div>
+</nav>
+
+<div class="container cont-tam1  ">
+                
+        <div id="carousel1" class="carousel slide " data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                <button  type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"  aria-current="true" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"  aria-current="true" aria-label="Slide 3"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                        
+                {% block foto1 %} {% endblock %}
+                <div class="carousel-caption">
+                        
+                        
+
+                </div>
+                </div>
+                
+                <div class="carousel-item">
+                        
+                    {% block foto2 %}{% endblock %}
+                
+                <div class="carousel-caption">
+                        
+
+                </div>
+                </div>
+                <div class="carousel-item">
+                    {% block foto3 %}{% endblock %}
+                <div class="carousel-caption">
+                        
+
+                </div>
+                </div>
+                </div>
+                <button  class="carousel-control-prev " type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span  class="carousel-control-prev-icon"  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next "  type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span  class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span  class="visually-hidden">Next</span>
+                </button>
+        </div>
+</div>
+<div class="container sm-12 md-12 lg-6 xl-6 con-zapa " >
+    {% block nombrezapa %}{% endblock %}
+        {% block preciozapa %}{% endblock %}
+                    {% block desczapa %} {% endblock %}
+                <div class="btn btn-3">
+                    {% block cantzapa %}  {% endblock %}
+                                   
+                      </div>
+        <div class="row">
+                <div class="col">
+                        <a href=""class="btn btn-primary mt-3 btn-color1 ">COMPRAR</a>
+                </div>
+                <div class="col">
+                        <a href=""class="btn btn-primary mt-3 btn-color2 ">AGREGAR AL CARRO</a>
+                </div>
+
+
+                
+        </div>
+</div>
+</div><div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5 " style="position:relative  ; top:70px; "
+>
+        <div class="container my-5 text-align:left">
+        <button class="btn btn-danger w-100" onclick="traer()">Ver comentarios</button>
+        <div class="mt-5" id="contenido">
+            
+        </div>
+
+
+        <script >
+                var contenido = document.querySelector('#contenido')
+                function traer() {
+                    fetch('https://jsonplaceholder.typicode.com/comments')
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data[0])
+                        contenido.innerHTML = `
+                        <p>Usuario: ${data[8].name} </p>
+                        <p>Reseña: ${data[8].body} </p>
+                        <p>Correo: ${data[8].email} </p>
+                        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                        <p>Usuario: ${data[9].name} </p>
+                        <p>Reseña: ${data[9].body} </p>
+                        <p>Correo: ${data[9].email} </p>  
+                        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                        <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                        <p>Usuario: ${data[10].name} </p>
+                        <p>Reseña: ${data[10].body} </p>
+                        <p>Correo: ${data[10].email} </p>`
+                    })
+                } 
+            </script>
+        </div>
+</div>
+<footer class=" text-lg-start">
+                
+    <div class="container-fluid p-4 cont-foot">
+      
+      <div class="row">
+        
+        <div class="col-sm-12 mb-4 mb-md-0 colorin">
+          <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+  
+          <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+            MENSAJES DE LOS CREADORES:
+            <br>
+            SIGAN EN TWITCH :
+            <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+            <br>
+            CRISTOBAL: Xd
+            <br>
+            SEBA: Borrenme el lol porfavor
+          </p>
+        
+        
+    </div>
+  
+    
+    <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+      © 2023 Copyright :
+      <br>
+      <a href="{% url 'test'%}" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="{% static 'menu/img/iconozapa.png'%}" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+            
+           
+      </a>
+    </div>
+    </div>
+     
+    </div>   
+</footer>
+    <script src="{% static 'menu/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

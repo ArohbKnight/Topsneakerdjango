@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iniciosesion.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/estilo.css">
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Registrarse</title>
+
+
+
+</head>
+<body>
+
+   <div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5" style="position:relative; top:70px;">
+     <div class="row align-items-stretch">
+       
+        <div class="d-flex  justify-content-center my-n2">
+
+            <img src="img/logo.png" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
+          </div>
+         <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Registrarse</h1>
+          <h3>Crea tu cuenta</h3>
+          <!--Inicio de formulario-->
+         <form action="#">
+            <div class="mb-1">
+               <label for="nombre" class="form-label">Nombre completo</label>
+               <input type="text" class="form-control"  id="nombre">
+            </div>
+            <div class="mb-1">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="rut">
+             </div>
+            <div class="mb-1">
+               <label for="email" class="form-label">Correo</label>
+               <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-1">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password">
+             </div>
+             <div class="mb-1">
+              <label for="password" class="form-label">Confirmar contraseña</label>
+              <input type="password" class="form-control" id="password">
+           </div>
+            <div class="mb-2">
+                <input type="checkbox" name="connected" class="form-check-input">
+                <label for="connected" class="form-check-label">Recuerdame</label>
+               </div>
+               <div class="mb-3">
+               <div class="g-recaptcha " data-sitekey="6Lde4tIlAAAAAM8YQ6qeq9SdyKyoQezSqVrWvG1_"></div>
+
+               </div>
+               <div class="d-grid">
+                   <input type="submit" onclick=" return crearcuenta();" value="Crear cuenta">
+               </div>
+               <div class="my-1">
+                   <span>¿Ya tienes cuenta?</span> <a href="iniciosesion.html">Ya tengo cuenta</a></pan> <br>
+                   <span><a href="#">Recuperar contraseña</a></span>
+               </div>
+         </form>
+           <div id = 'error'></div>
+        </div>
+        <div class="col">
+
+        </div>
+     </div>
+   </div>
+   <!--con el id de cada peticion de informacion del usuario, podemos programar la validacion-->
+<!--Fin de formulario-->
+  
+
+   <footer class=" text-lg-start">
+                
+        <div class="container-fluid p-4 cont-foot">
+          
+          <div class="row">
+            
+            <div class="col-sm-12 mb-4 mb-md-0 colorin">
+              <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+      
+              <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+                MENSAJES DE LOS CREADORES:
+                <br>
+                SIGAN EN TWITCH :
+                <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+                <br>
+                CRISTOBAL: Xd
+                <br>
+                SEBA: Borrenme el lol porfavor
+              </p>
+            
+            
+        </div>
+      
+        
+        <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+          © 2023 Copyright :
+          <br>
+          <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+                
+               
+          </a>
+        </div>
+        </div>
+         
+        </div>   
+</footer> 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validaciones.js"> </script>
+  </body>
+</html>

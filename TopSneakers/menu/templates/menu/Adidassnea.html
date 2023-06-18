@@ -1,0 +1,55 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} adidas {% endblock %}
+
+
+
+{% block relleno %}
+<div class="container-fluid dist">
+  <div class="row row-cols-1 row-cols-md-4 row-cols-md-4 g-4" style="position:relative; top:150px; "> 
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'ad_1'%}"><img src="{% static 'menu/img/adidas court alpha.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Adidas Court Alpha</h5>
+          <p class="card-text">$67.990<br>Estas zapatillas de la marca adidas son una respuesta clásica para el futuro, inspiradas en el tenis y diseñadas para envolver tus pies en una silueta clásica. Son ideales para explorar tu propia individualidad.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'ad_2'%}"><img src="{% static 'menu/img/adidas edge lux 2.jpg'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Adidas edge lux 2</h5>
+          <p class="card-text">$69.990<br>Consigue tus objetivos marcados con un diseño cómodo y flexible. Esta zapatilla de running se ha confeccionado con una horma específica para mujer que se adapta a tu pisada, incorpora la tecnología BOUNCE</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'ad_3'%}"><img src="{% static 'menu/img/bad3.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body"> 
+          <h5 class="card-title">Forum Low
+            Bad Bunny</h5>
+          <p class="card-text">$600.000<br>Las Adidas Forum Low Bad Bunny Pink Easter Egg son unas zapatillas deportivas diseñadas en colaboración con el artista urbano Bad Bunny. Estas zapatillas presentan un estilo único y llamativo con un color rosa intenso y detalles en tonos pastel...</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3 ">
+      <div class="card h-100">
+        <a href="{% url 'ad_4'%}"><img src="{% static 'menu/img/courtsmash.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Adidas Courtsmash</h5>
+          <p class="card-text">$44.990<br>Estas zapatillas tienen un diseño ligero perfecto para devolver saques complicados. Diseñadas para tenistas aficionados, incorporan un exterior de cuero sintético resistente al desgaste.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

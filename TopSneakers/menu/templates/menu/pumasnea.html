@@ -1,0 +1,52 @@
+{% extends 'menu/plant_menuusu.html'%}
+{% load static %}
+
+{% block titulo %} puma {% endblock %}
+
+{% block relleno %}
+<div class="container-fluid dist">
+  <div class="row row-cols-1 row-cols-md-4  g-4" style="position:relative; top:150px; "> 
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'pu_1'%}"><img src="{% static 'menu/img/puma Rs 1.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Puma RS x3 Level up</h5>
+          <p class="card-text">$36.990<br>Es una zapatilla ligera que proporciona un alto rebote en cada una de vuestras rutinas. Presenta un sistema de sujeción trenzada para mayor ajuste</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'pu_2'%}"><img src="{% static 'menu/img/Slipstream puma.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Puma slipstream</h5>
+          <p class="card-text">$89.990<br>Estas zapatillas Slipstream Lo de la segunda temporada de la colección PUMA x AMI están guiadas por la visión creativa de la marca parisina.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'pu_3'%}"><img src="{% static 'menu/img/future rider 2.PNG'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title">Puma future rider chroma mujer</h5>
+          <p class="card-text">$89.990<br>Vuelve a pensar en tu concepto de lo que es posible con nuestra colección Future Rider, una incorporación impactante a nuestra familia de zapatillas Rider que se inspira en la tecnología.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+    <div class="col sm-12 md-3 lg-3 xl-3">
+      <div class="card h-100">
+        <a href="{% url 'pu_4'%}"><img src="{% static 'menu/img/back to school 4444.png'%}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+          <h5 class="card-title"> Puma back to school</h5>
+          <p class="card-text">$99.990<br>Las zapatillas back to school 2020 son un calzado deportivo de estilo clásico, diseñadas para un uso casual y urbano.Presentan un diseño elegante y moderno, con detalles retro que las hacen únicas.</p>
+          <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock %}
+    

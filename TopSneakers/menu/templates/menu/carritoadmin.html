@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/iniciosesion.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <title>carrito</title>
+</head>
+<body>
+            <!-- menu -->
+            <nav class="navbar navbar-expand-md navbar-light  fixed-top">
+                <div class="container container-color ">
+                  <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+                          
+                         
+                  </a>
+                  
+                  <button class="navbar-toggler " 
+                   data-bs-toggle="collapse" 
+                   data-bs-target="#mainNav" 
+                   aria-controls="mainNav"
+                   aria-expanded="false" 
+                   aria-label="toggle navigation">
+                          <span style="color: rgb(173, 6, 6);" class="icon-menu "></span>
+                  </button>
+                 <div class="collapse navbar-collapse " id="mainNav">
+                          <ul class="navbar-nav ms-auto mb-2 mb-md-0 "style="position: relative;">
+                                  <li >
+                                          
+                                          <div class="buscar">
+                                                  <input type="text" placeholder="Buscar" required />
+                                            
+                                                  <div class="btn btn-1">
+                                                    <i  class="fas fa-search icon-search "></i>
+                                                  </div>
+                                          </div>                  
+                                  </li>
+                                  <li>
+                                          <div>
+                                                  <a href="carritoadmin.html" class="nav-link a1 " ><img src="img/carrito.png" alt="carrito" height="15px" width="20px"></i></a>
+                                          </div>
+                                 </li> 
+                                  <li >
+                                           <a href="inicioadmin.html" class="nav-link a1">INICIO</a>
+                                  </li>
+                                  <li >
+                                          <a href="productosadmin.html" class="nav-link a1">PRODUCTOS</a>
+                                          
+                                 </li>
+                                 <li >
+                                           <a href="contactosadmin.html" class="nav-link a1">CONTACTO</a>
+                                                  
+                                  </li> 
+                                  <li >
+                                          <a href="sobrenosotrosadmin.html" class="nav-link a1">SOBRE NOSOTROS</a>
+                                 </li>  
+                                            
+                                 <li>             
+                                          <div>
+                                                <a href="perfiladmin.html" class="nav-link a1">CUENTA</a>  
+                                          </div>
+                                 </li>  
+                          </ul>
+                
+               
+                  </div>
+                </div>
+          </nav>   
+
+
+          <div class="container arr">
+            <div class="row">
+              <h1>Carrito de compras</h1>
+            </div>
+
+            <table class="table  table-hover">
+
+          
+
+              <thead>
+                <div class="row">
+                <tr>
+                  <div class="col sm-3"><th>Producto</th></div>
+                  <div class="col sm-3"><th>Precio</th></div>
+                  <div class="col sm-3"><th>Cantidad</th></div>
+                  <div class="col sm-3"><th>Subtotal</th></div>
+                  
+                  
+                  
+                  
+                </tr>
+              </div>
+              </thead>
+              <tbody>
+                <div class="row">
+                <tr>
+                  <td class="" id="">Zapatila future rider</td>
+                  <td class="" id="">$80.00</td>
+                  <td class="" id="" >2</td>
+                  <td class="" id="">$160.00</td>
+                </tr>
+              </div>
+                <div class="row">
+                <tr>
+                  <td>zapatilla Air force 1</td>
+                  <td>$20.00</td>
+                  <td>1</td>
+                  <td>$20.00</td>
+                </tr>
+              </div>
+              </tbody>
+              <div class="row">
+              <tfoot>
+                <tr>
+                  <td colspan="3">Total</td>
+                  <td>$180.00</td>
+                </tr>
+              </tfoot>
+            </div>
+            </table>
+            <div class="row ">
+              <div class="col sm-12 md-4 lg-4 xl-4 arr-buttom"><button class="btn btn-primary my-3 btn-color1"type="submit">Pagar </button></div>
+              
+              
+            
+            
+          
+          
+          
+          </div>
+        </div> 
+          <footer class=" text-lg-start">
+                
+            <div class="container-fluid p-4 cont-foot">
+              
+              <div class="row">
+                
+                <div class="col-sm-12 mb-4 mb-md-0 colorin">
+                  <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+          
+                  <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+                    MENSAJES DE LOS CREADORES:
+                    <br>
+                    SIGAN EN TWITCH :
+                    <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+                    <br>
+                    CRISTOBAL: Xd
+                    <br>
+                    SEBA: Borrenme el lol porfavor
+                  </p>
+                
+                
+            </div>
+          
+            
+            <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+              © 2023 Copyright :
+              <br>
+              <a href="{% url 'test'%}" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="{% static 'menu/img/iconozapa.png'%}" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+                    
+                   
+              </a>
+            </div>
+            </div>
+             
+            </div>   
+    </footer>          
+</body>
+</html>
