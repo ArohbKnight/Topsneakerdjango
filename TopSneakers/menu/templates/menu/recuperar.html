@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'menu/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'menu/css/estilo.css' %}">
     <link rel="stylesheet" href="{% static 'menu/css/fontello.css' %}">
-    <title>Inicio de sesion</title>
+    <title>recuperar</title>
 
 </head>
 <body>
@@ -21,36 +21,28 @@
 
          <img src="{% static 'menu/img/logo.png'%}" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
        </div>
-      <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Inicio de sesion </h1>
+      <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Recuperar contraseña </h1>
          <form action="#">
             <div class="mb-1">
                <label for="correo" class="form-label">Correo electronico</label>
                <input type="text" class="form-control" id="correo" name="correo">
-            </div>
-            <div class="mb-1">
-               <label for="password" class="form-label">Contraseña</label>
-               <input type="password" class="form-control" id="password">
             </div>
             <div class="mb-2">
                 <input type="checkbox" name="connected" class="form-check-input">
                 <label for="connected" class="form-check-label">Recuerdame</label>
                </div>
                <div class="d-grid">
-                  <input type="submit" onclick=" return entrar();" value="Iniciar sesion"> 
+                  <input type="submit" onclick=" return entrar();" value="recuperar"> 
                </div>
                <div class="my-1">
                    <span>¿No tienes cuenta?</span> <a href="{% url 'registrarse'%}">Registrarse</a></span> <br>
-                   <span><a href="{% url 'recuperar'%}">Recuperar contraseña</a></span>
-                   <span><a href="{% url 'elegir'%}">Ingreso temporal</a></span>
                </div>
          </form>
 
         </div>
-        <div class="col">
-
-        </div>
+        
      </div>
-   </div>
+   
    <footer class=" text-lg-start">
                 
       <div class="container-fluid p-4 cont-foot sm-12 md-12 lg-6 xl-6">
@@ -87,7 +79,7 @@
        
       </div>   
 </footer> 
-<script src="{% static 'menu/js/bootstrap.bundle.min.js' %}"></script>
+   <script src="{% static 'menu/js/bootstrap.bundle.min.js' %}"></script>
    <script src="{% static 'menu/js/validaciones.js'%}"></script> 
 </body>
 </html>

@@ -1,0 +1,65 @@
+{% extends 'menu/plant_admin.html'%}
+{% load static %}
+{% block titulo %}admin {% endblock %}
+{% block relleno %}
+          <div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5" style="position:relative; top:100px">
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+                    <h2></h2>
+                    <h2></h2>
+                    <h2>Modificar stock</h2>
+                    <form>
+                    <div class="mb-3 my-5">
+                        <label for="producto" class="form-label">Nombre del producto</label>
+                        <input type="text" class="form-control" id="idproducto" placeholder="ID del producto a modificar">
+                      </div>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Cambio a realizar</option>
+                        <option value="1">Agregar stock</option>
+                        <option value="2">Eliminar Stock</option>
+                        <option value="2">Modificar Producto</option>
+                      </select>
+                      <div class="col-12">
+                        <div>
+                            <button class="btn btn-success my-3" type="submit">Confirmar</button>
+                            <button class="btn btn-secondary my-3" type="submit">Deshacer</button>
+                        </div>
+                      </div>
+                    </form>
+            </div>
+               
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 my-5">
+                <h2>Lista de productos disponibles</h2>
+                <table class="table table-bordered table-striped my-3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Producto</th>
+                            <th>Cantidad disponibles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Air Jordan 1</td>
+                            <td>5 disponibles</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>air max </td>
+                            <td>0 disponibles</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>nike air force 1</td>
+                            <td>2 disponibles</td>
+                        </tr>
+                    </tbody>
+                </table> 
+                
+            </div>
+            
+        </div>
+    </div>
+                
+            {%endblock%}

@@ -1,201 +1,87 @@
+{% extends 'menu/plant_admin.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    
-</head>
-<body>
-        <!-- MENU -->
-        <nav class="navbar navbar-expand-md navbar-light  fixed-top">
-              <div class="container container-color ">
-                <a href="test.html" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
-                        
-                       
-                </a>
+{% block titulo %}inicio {% endblock %}
+{% block relleno %}
+ <!-- CARRUSEL -->
+ <div class="container cont-tam-carru sm-12 md-12 lg-6 xl-6">
                 
-                <button class="navbar-toggler " 
-                 data-bs-toggle="collapse" 
-                 data-bs-target="#mainNav" 
-                 aria-controls="mainNav"
-                 aria-expanded="false" 
-                 aria-label="toggle navigation">
-                        <span style="color: rgb(173, 6, 6);" class="icon-menu "></span>
+        <div id="carousel1" class="carousel slide " data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                <button  type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"  aria-current="true" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"  aria-current="true" aria-label="Slide 3"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                        
+                <img src="{% static 'menu/img/bad3.png' %}" class="d-block w-100 img-carru  " alt="foto1">
+                <div class="carousel-caption">
+                        
+                        <h5 class="h5-fo"   >Forum Low
+                                Bad Bunny</h5>
+                        <p class="p-fo"  >Las Adidas Forum Low Bad Bunny Pink Easter Egg son</p>
+                                
+                        <a href="{% url 'ad_3'%}"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
+
+                </div>
+                </div>
+                
+                <div class="carousel-item">
+                        
+                <img src="{% static 'menu/img/back to school 4444.png' %}" class="d-block w-100 img-carru " alt="foto2">
+                
+                <div class="carousel-caption">
+                        <h5 class="h5-fo">Puma Back To School</h5>
+                        <p class="p-fo">
+                                Las zapatillas back to school 2020 son un calzado deportivo...   
+                        </p>
+                        <a href="{% url 'pu_4'%}"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
+
+                </div>
+                </div>
+                <div class="carousel-item">
+                <img src="{% static 'menu/img/jordan gris.png' %}" class="d-block w-100 img-carru " alt="foto3">
+                <div class="carousel-caption">
+                        <h5 class="h5-fo">Jordan 1 mid light smoke</h5>
+                        <p  class="p-fo ">
+                                El zapato cuenta con una puntera perforada...
+                                    
+                        </p>
+                        <a href="{% url 'jordansmoke'%}"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
+
+                </div>
+                </div>
+                </div>
+                <button  class="carousel-control-prev " type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span  class="carousel-control-prev-icon"  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
                 </button>
-               <div class="collapse navbar-collapse " id="mainNav">
-                        <ul class="navbar-nav ms-auto mb-2 mb-md-0 "style="position: relative;">
-                                <li >
-                                        
-                                        <div class="buscar">
-                                                <input type="text" placeholder="Buscar" required />
-                                          
-                                                <div class="btn btn-1">
-                                                  <i  class="fas fa-search icon-search "></i>
-                                                </div>
-                                        </div>                  
-                                </li>
-                                <li>
-                                        <div>
-                                                <a href="carritoadmin.html" class="nav-link a1 " ><img src="img/carrito.png" alt="carrito" height="15px" width="20px"></i></a>
-                                        </div>
-                               </li> 
-                                <li >
-                                         <a href="inicioadmin.html" class="nav-link a1">INICIO</a>
-                                </li>
-                                <li >
-                                        <a href="productosadmin.html" class="nav-link a1">PRODUCTOS</a>
-                                        
-                               </li>
-                               <li >
-                                         <a href="contactosadmin.html" class="nav-link a1">CONTACTO</a>
-                                                
-                                </li> 
-                                <li >
-                                        <a href="sobrenosotrosadmin.html" class="nav-link a1">SOBRE NOSOTROS</a>
-                               </li>  
-                                          
-                               <li>             
-                                        <div>
-                                              <a href="perfiladmin.html" class="nav-link a1">CUENTA</a>  
-                                        </div>
-                               </li>  
-                               <li>             
-                                <div>
-                                      <a href="menuadmin.html" class="nav-link a1">ADMIN</a>  
-                                </div>
-                       </li>  
-                        </ul>
-              
-             
-                </div>
-              </div>
-        </nav>
-        <!-- CARRUSEL -->
-        <div class="container cont-tam-carru sm-12 md-12 lg-6 xl-6">
-                
-                <div id="carousel1" class="carousel slide " data-bs-ride="carousel">
+                <button class="carousel-control-next "  type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span  class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span  class="visually-hidden">Next</span>
+                </button>
+        </div>
+</div>
+<!-- MARCAS-->      
+<div  class="container-fluid sm-12 md-12 lg-6 xl-6">
 
-                        <div class="carousel-indicators">
-                        <button  type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"  aria-current="true" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"  aria-current="true" aria-label="Slide 3"></button>
-                        </div>
-                        
-                        <div class="carousel-inner">
-                        <div class="carousel-item active">
-                                
-                        <img src="img/bad3.png" class="d-block w-100 img-carru  " alt="foto1">
-                        <div class="carousel-caption">
-                                
-                                <h5 class="h5-fo"   >Forum Low
-                                        Bad Bunny</h5>
-                                <p class="p-fo"  >Las Adidas Forum Low Bad Bunny Pink Easter Egg son</p>
-                                        
-                                <a href="ad_3.html"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
-
-                        </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                                
-                        <img src="img/back to school 4444.png" class="d-block w-100 img-carru " alt="foto2">
-                        
-                        <div class="carousel-caption">
-                                <h5 class="h5-fo">Puma Back To School</h5>
-                                <p class="p-fo">
-                                        Las zapatillas back to school 2020 son un calzado deportivo...   
-                                </p>
-                                <a href="pu_4.html"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
-
-                        </div>
-                        </div>
-                        <div class="carousel-item">
-                        <img src="img/jordan gris.png" class="d-block w-100 img-carru " alt="foto3">
-                        <div class="carousel-caption">
-                                <h5 class="h5-fo">Jordan 1 mid light smoke</h5>
-                                <p  class="p-fo ">
-                                        El zapato cuenta con una puntera perforada...
-                                            
-                                </p>
-                                <a href="jordanair1mid.html"class="btn btn-primary mt-3 btn-color1">Ver Más</a>
-
-                        </div>
-                        </div>
-                        </div>
-                        <button  class="carousel-control-prev " type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                        <span  class="carousel-control-prev-icon"  aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next "  type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                        <span  class="carousel-control-next-icon " aria-hidden="true"></span>
-                        <span  class="visually-hidden">Next</span>
-                        </button>
-                </div>
-        </div>                                                                                      
-        <!-- MARCAS-->      
-        <div  class="container-fluid ">
-
-                <div  class="row">
-                  <div class="col-sm-4 img"  >
-                    <a href="nikesnea.html"><img src="img/nike-log.jpg" alt="" ></a>
-                    <p></p>
-                  </div>
-                  <div class="col-sm-4 img "   >
-                     <a href="Adidassnea.html"><img src="img/adidas-log.jpg" alt=""  ></a>
-                    <p></p>
-                  </div>
-                  <div class="col-sm-4 img ">
-                    <a href="pumasnea.html"><img src="img/puma-log.png" alt="" ></a> 
-                    <p></p>
-                  </div>
-                </div>
-            
-              </div>
-        <!-- PIE DE PAGINA--> 
-        <footer class=" text-lg-start">
-                
-                <div class="container-fluid p-4 cont-foot">
-                  
-                  <div class="row">
-                    
-                    <div class="col-sm-12 mb-4 mb-md-0 colorin">
-                      <h5 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h5>
-              
-                      <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
-                        MENSAJES DE LOS CREADORES:
-                        <br>
-                        SIGAN EN TWITCH :
-                        <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
-                        <br>
-                        CRISTOBAL: Xd
-                        <br>
-                        SEBA: Borrenme el lol porfavor
-                      </p>
-                    
-                    
-                </div>
-              
-                
-                <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
-                  © 2023 Copyright :
-                  <br>
-                  <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
-                        
-                       
-                  </a>
-                </div>
-                </div>
-                 
-                </div>   
-        </footer>               
-              
-        <script src="js/bootstrap.bundle.min.js"></script>  
-</body>
-</html>
+        <div  class="row">
+          <div class="col-sm-4 img"  >
+            <a href="{%  url 'nikesnea'%}"><img src="{% static 'menu/img/nike-log.jpg' %}" alt="" ></a>
+            <p></p>
+          </div>
+          <div class="col-sm-4 img "   >
+             <a href="{% url 'adidassnea'%}"><img src="{% static 'menu/img/adidas-log.jpg' %}" alt=""  ></a>
+            <p></p>
+          </div>
+          <div class="col-sm-4 img ">
+            <a href="{% url 'pumasnea'%}"><img src="{% static 'menu/img/puma-log.png' %}" alt="" ></a> 
+            <p></p>
+          </div>
+        </div>
+    
+      </div>
+<!-- PIE DE PAGINA--> 
+{% endblock %}

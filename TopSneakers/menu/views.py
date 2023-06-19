@@ -95,8 +95,8 @@ def carrito(request):
 def airforce(request):
     return render (request,'menu/airforce.html')
 
-def admin(request):
-    return render (request,'menu/admin.html')
+def modificar(request):
+    return render (request,'menu/modificar.html')
 
 def adidassnea(request):
     return render (request,'menu/adidassnea.html')
@@ -112,3 +112,6 @@ def ad_2(request):
 
 def ad_1(request):
     return render (request,'menu/ad_1.html')
+
+def recuperar(request):
+    return render (request,'menu/recuperar.html')
