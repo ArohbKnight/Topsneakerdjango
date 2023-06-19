@@ -1,85 +1,7 @@
+{% extends 'menu/plant_admin.html'%}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/iniciosesion.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/fondo.css">
-    <title>Sobre nosotros</title>
-
-
-
-</head>
-<body>
-        <!-- MENU -->
-        <nav class="navbar navbar-expand-md navbar-light  fixed-top">
-            <div class="container container-color ">
-              <a href="test.html" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
-                      
-                     
-              </a>
-              
-              <button class="navbar-toggler " 
-               data-bs-toggle="collapse" 
-               data-bs-target="#mainNav" 
-               aria-controls="mainNav"
-               aria-expanded="false" 
-               aria-label="toggle navigation">
-                      <span style="color: rgb(173, 6, 6);" class="icon-menu "></span>
-              </button>
-             <div class="collapse navbar-collapse " id="mainNav">
-                      <ul class="navbar-nav ms-auto mb-2 mb-md-0 "style="position: relative;">
-                              <li >
-                                      
-                                      <div class="buscar">
-                                              <input type="text" placeholder="Buscar" required />
-                                        
-                                              <div class="btn btn-1">
-                                                <i  class="fas fa-search icon-search "></i>
-                                              </div>
-                                      </div>                  
-                              </li>
-                              <li>
-                                      <div>
-                                              <a href="carritoadmin.html" class="nav-link a1 " ><img src="img/carrito.png" alt="carrito" height="15px" width="20px"></i></a>
-                                      </div>
-                             </li> 
-                              <li >
-                                       <a href="inicioadmin.html" class="nav-link a1">INICIO</a>
-                              </li>
-                              <li >
-                                      <a href="productosadmin.html" class="nav-link a1">PRODUCTOS</a>
-                                      
-                             </li>
-                             <li >
-                                       <a href="contactosadmin.html" class="nav-link a1">CONTACTO</a>
-                                              
-                              </li> 
-                              <li >
-                                      <a href="sobrenosotrosadmin.html" class="nav-link a1">SOBRE NOSOTROS</a>
-                             </li>  
-                                        
-                             <li>             
-                                      <div>
-                                            <a href="perfiladmin.html" class="nav-link a1">CUENTA</a>  
-                                      </div>
-                             </li>  
-                             <li>             
-                              <div>
-                                    <a href="menuadmin.html" class="nav-link a1">ADMIN</a>  
-                              </div>
-                     </li>  
-                      </ul>
-            
-           
-              </div>
-            </div>
-      </nav>
+{% block titulo %}sobrenosostros {% endblock %}
+{% block relleno %}
     <!-- menu -->
       <div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5" style="position:relative; top:70px;"
       >
@@ -93,7 +15,7 @@
     
             <div class="d-flex  justify-content-center my-n2">
    
-               <img src="img/logo.png" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
+               <img src="{% static 'menu/img/logo.png'%}" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
              </div>
             <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Sobre nosotros </h1>
              <h2>Top Sneakers</h2>
@@ -113,8 +35,6 @@
 
         </div>
       </div>
+      {% endblock %}
       
-      <script src="js/bootstrap.bundle.min.js"></script> 
-    </body>
-    </html>
           

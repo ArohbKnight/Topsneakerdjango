@@ -5,63 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <title>elegir</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'menu/img/jordanicon.png' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/fontello.css' %}">
     
 </head>
 <body>
-        <!-- MENU -->
+        
         <div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5"style=";position:relative; top:70px;">
             <div class="row align-items-stretch" style="text-align: center;margin-top: 15%;margin-bottom: 20%;">
               <div class="col">
-                <a href="inicioadmin.html"class="btn btn-primary mt-3 btn-color1 btn-ele">Admin</a>
+                <a href="{% url 'inicioadmin'%}"class="btn btn-primary mt-3 btn-color1 btn-ele">Admin</a>
               </div>
               <div class="col">
-                <a href="test.html"class="btn btn-primary mt-3 btn-color1 btn-ele">Usuario</a>
+                <a href="{% url 'test'%}"class="btn btn-primary mt-3 btn-color1 btn-ele">Usuario</a>
               </div>
              
             </div>
           </div>
-        <footer class=" text-lg-start">
+          <footer class=" text-lg-start">
                 
-                <div class="container-fluid p-4 cont-foot">
-                  
-                  <div class="row">
-                    
-                    <div class="col-sm-12 mb-4 mb-md-0 colorin">
-                      <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+            <div class="container-fluid p-4 cont-foot sm-12 md-12 lg-6 xl-6">
               
-                      <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
-                        MENSAJES DE LOS CREADORES:
-                        <br>
-                        SIGAN EN TWITCH :
-                        <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
-                        <br>
-                        CRISTOBAL: Xd
-                        <br>
-                        SEBA: Borrenme el lol porfavor
-                      </p>
-                    
-                    
-                </div>
-              
+              <div class="row">
                 
-                <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
-                  © 2023 Copyright :
-                  <br>
-                  <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
-                        
-                       
-                  </a>
-                </div>
-                </div>
-                 
-                </div>   
-        </footer>               
-              
-        <script src="js/bootstrap.bundle.min.js"></script>  
+                <div class="col-sm-12 md-12 lg-6 xl-6 mb-4 mb-md-0 colorin">
+                  <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+          
+                  <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+                    MENSAJES DE LOS CREADORES:
+                    <br>
+                    JOSE :
+                    <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+                    <br>
+                    CRISTOBAL: Xd
+                    <br>
+                    SEBA: Borrenme el lol porfavor
+                  </p>
+                
+                
+            </div>
+          
+            
+            <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+              © 2023 Copyright :
+              <br>
+              <a href="" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="{% static 'menu/img/iconozapa.png' %}" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+                    
+                   
+              </a>
+            </div>
+            </div>
+             
+            </div>   
+    </footer> 
+          <!-- SCRIPTS-->
+          <script src="{% static 'menu/js/bootstrap.bundle.min.js' %}"></script>
+
+
 </body>
 </html>

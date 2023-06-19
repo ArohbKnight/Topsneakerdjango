@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/iniciosesion.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'menu/img/jordanicon.png' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/fontello.css' %}">
     <title>Inicio de sesion</title>
 
 </head>
@@ -19,7 +19,7 @@
        
       <div class="d-flex  justify-content-center my-n2">
 
-         <img src="img/logo.png" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
+         <img src="{% static 'menu/img/logo.png'%}" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
        </div>
       <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Inicio de sesion </h1>
          <form action="#">
@@ -39,9 +39,9 @@
                   <input type="submit" onclick=" return entrar();" value="Iniciar sesion"> 
                </div>
                <div class="my-1">
-                   <span>¿No tienes cuenta?</span> <a href="registrarse.html">Registrarse</a></span> <br>
+                   <span>¿No tienes cuenta?</span> <a href="{% url 'registrarse'%}">Registrarse</a></span> <br>
                    <span><a href="#">Recuperar contraseña</a></span>
-                   <span><a href="elegir.html">Ingreso temporal</a></span>
+                   <span><a href="{% url 'elegir'%}">Ingreso temporal</a></span>
                </div>
          </form>
 
@@ -53,41 +53,41 @@
    </div>
    <footer class=" text-lg-start">
                 
-        <div class="container-fluid p-4 cont-foot">
-          
-          <div class="row">
-            
-            <div class="col-sm-12 mb-4 mb-md-0 colorin">
-              <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
-      
-              <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
-                MENSAJES DE LOS CREADORES:
-                <br>
-                SIGAN EN TWITCH :
-                <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
-                <br>
-                CRISTOBAL: Xd
-                <br>
-                SEBA: Borrenme el lol porfavor
-              </p>
-            
-            
-        </div>
-      
+      <div class="container-fluid p-4 cont-foot sm-12 md-12 lg-6 xl-6">
         
-        <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
-          © 2023 Copyright :
-          <br>
-          <a href="#" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="img/iconozapa.png" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
-                
-               
-          </a>
-        </div>
-        </div>
-         
-        </div>   
+        <div class="row">
+          
+          <div class="col-sm-12 md-12 lg-6 xl-6 mb-4 mb-md-0 colorin">
+            <h3 style="font-family: 'Courier New', Courier, monospace;" class="text-center">Gracias por ver</h3>
+    
+            <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >
+              MENSAJES DE LOS CREADORES:
+              <br>
+              JOSE :
+              <a href="https://www.twitch.tv/arohbknight"> AROHBKNIGHT</a>
+              <br>
+              CRISTOBAL: Xd
+              <br>
+              SEBA: Borrenme el lol porfavor
+            </p>
+          
+          
+      </div>
+    
+      
+      <div class="text-center p-3" style="border: 2px solid rgb(173, 6, 6);background-color: rgb(177, 177,177 );" >
+        © 2023 Copyright :
+        <br>
+        <a href="" style="color: rgb(173, 6, 6);" class="navbar-brand"><span >TOP<img src="{% static 'menu/img/iconozapa.png' %}" height="20px" width="20px" alt=""></span><h5 class="h5-fo1">SNEAKERS</h5>
+              
+             
+        </a>
+      </div>
+      </div>
+       
+      </div>   
 </footer> 
-   <script src="js/bootstrap.bundle.min.js"></script> 
-   <script src="js/validaciones.js"></script> 
+<script src="{% static 'menu/js/bootstrap.bundle.min.js' %}"></script>
+   <script src="{% static 'menu/js/validaciones.js'%}"></script> 
 </body>
 </html>
