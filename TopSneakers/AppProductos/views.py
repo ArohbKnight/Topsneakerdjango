@@ -1,17 +1,11 @@
 from django.shortcuts import render
-from .models import Producto
-
 # Create your views here.
-def test(request):
-    return render (request,'menu/test.html')
 
 def productos(request):
+    return render (request,'AppProductos/Appproductos.html')
 
-    productos=Producto.objects.all()
-
-    return render (request,'menu/productos.html',{"productos":productos})
-
-    
+def test(request):
+    return render (request,'menu/test.html')
 
 def stayloyal(request):
     return render (request,'menu/stayloyal.html')

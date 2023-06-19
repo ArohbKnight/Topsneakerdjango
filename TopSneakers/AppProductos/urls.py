@@ -1,11 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, registrarse, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, admin, adidassnea, ad_4, ad_3, ad_2, ad_1
-from . import views
+from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, registrarse, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin, productos, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, admin, adidassnea, ad_4, ad_3, ad_2, ad_1
+from menu import views
 
 
 urlpatterns = [
-    path('',views.test, name='test'),
     path('stayloyal/',views.stayloyal, name="stayloyal"),
     path('sobrenosotrosadmin/',views.sobrenosotrosadmin, name='sobrenosotrosadmin'),
     path('sobrenosotros/',views.sobrenosotros, name='sobrenosotros'),
@@ -15,9 +14,8 @@ urlpatterns = [
     path('pu_3/',views.pu_3, name='pu_3'),
     path('pu_2/',views.pu_2, name='pu_2'),
     path('pu_1/',views.pu_1, name='pu_1'),
-    path('productosadmin/',views.productosadmin, name='productosadmin'),
-    path('productos/',views.productos, name='productos'),
-    
+
+   
     path('privacidad/',views.privacidad, name='privacidad'),
     path('perfil/',views.perfil, name='perfil'),
     path('perfiladmin/',views.perfiladmin, name='perfiladmin'),

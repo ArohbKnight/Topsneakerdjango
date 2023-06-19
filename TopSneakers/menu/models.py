@@ -36,42 +36,6 @@ class Usuario(models.Model):
         return str(self.rut_usuario)
 
     
-class Producto(models.Model):
-    id_producto = models.AutoField(primary_key=True)
-    detalle = models.ForeignKey(Detalle, on_delete=models.CASCADE, related_name='productos')
-    nombre_producto = models.CharField(max_length=50, blank=False, verbose_name='Nombre producto')
-    descripcion_producto = models.CharField(max_length=150, blank=False, verbose_name='Descripcion producto')
-    talla_producto = models.IntegerField(blank=False, verbose_name='Talla de producto')
-    stock_producto = models.IntegerField(blank=False, verbose_name='Stock producto')
-    precio_producto = models.IntegerField(blank=False, verbose_name='Precio producto')
-
-    def __str__(self):
-        return self.nombre_producto
-
-
-
-class Foto(models.Model):
-    id_foto = models.OneToOneField(Producto, primary_key=True, on_delete=models.CASCADE)
-    nombre_foto = models.CharField(max_length=50, blank=False, verbose_name='Nombre foto')
-    img_foto = models.ImageField(blank=False, verbose_name='Imagen foto')
-
-    def __str__(self):
-        return self.nombre_foto
-
-class Modelo(models.Model):
-    nombre_modelo = models.ForeignKey(Producto, max_length=50, blank=False, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return str(self.nombre_modelo)
-    
-class Marca(models.Model):
-    id_marca = models.ForeignKey(Modelo, on_delete=models.CASCADE, related_name='marcas')
-    nombre_marca = models.CharField(max_length=50, blank=False, verbose_name='Nombre marca')
-
-    def __str__(self):
-        return self.nombre_marca
-
-    
 class Rol(models.Model):
     id_rol = models.OneToOneField(Usuario, primary_key=True, on_delete=models.CASCADE)
     nombre_rol = models.CharField(max_length=50, blank=False, verbose_name='Nombre Rol')
@@ -86,3 +50,30 @@ class Pregunta(models.Model):
 
     def __str__(self):
         return self.nombre_pregunta
+
+class CategoriaProd(models.Model):
+    nombre = models.CharField(max_length=50)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name="categoria"
+        verbose_name_plural="categorias"
+
+    def __str__(self):
+        return self.nombre
+
+class Producto (models.Model):
+    nombre = models.CharField(max_length=50)
+    categoria = models.ForeignKey(CategoriaProd, on_delete=models.CASCADE)
+    imagen = models.ImageField(upload_to='menu')
+    descripcion_producto = models.CharField(max_length=150, blank=False, verbose_name='Descripcion producto')
+    talla_producto = models.IntegerField(blank=False, verbose_name='Talla de producto')
+    stock_producto = models.IntegerField(blank=False, verbose_name='Stock producto')
+    precio_producto = models.IntegerField(blank=False, verbose_name='Precio producto')
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name="producto"
+        verbose_name_plural="productos"
