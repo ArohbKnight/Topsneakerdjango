@@ -1,4 +1,4 @@
-{% extends 'menu/test.html' %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,6 @@
     
     <title>Producto</title>
 </head>
-{% block content %}
 <body>
          <!-- menu -->
          <nav class="navbar navbar-expand-md navbar-light  fixed-top">
@@ -83,7 +82,7 @@
       <div  class="row">
         <div class="col-sm-4 img"  >
           <a href="{%  url 'nikesnea'%}"><img src="{% static 'menu/img/nike-log.jpg' %}" alt="" ></a>
-          <p>a</p>
+          <p></p>
         </div>
         <div class="col-sm-4 img "   >
            <a href="{% url 'adidassnea'%}"><img src="{% static 'menu/img/adidas-log.jpg' %}" alt=""  ></a>
@@ -94,123 +93,29 @@
           <p></p>
         </div>
       </div>
-  
     </div>
-    {%for Producto in productos %}
     </div>
+    
     <div class="container-fluid dist">
+      {%for Producto in productos %}
     <div class="row row-cols-1 row-cols-md-4 g-4" style="position:relative; top:150px; "> 
       <div class="col sm-12 md-3 lg-3 xl-3">
         <div class="card h-100">
-         <a href="{% url 'airforce'%}"> <img src="{{producto.imagen.url}}" class="card-img-top" alt="..."> </a>
+          <img src="{{Producto.imagen.url}}" class="card-img-top" alt="..."> 
           <div class="card-body">
-            <h5 class="card-title"id-data="1">{{producto.nombre}}</h5>
-            <p class="card-text" id="price">126.990</p>
-            <p class="card-text" >El fulgor vive en el Nike Air Force 1 07, el modelo original de básquetbol que da un toque novedoso a las características más recordadas: revestimientos con costuras duraderas, acabados impecables.</p>
+            <h5 class="card-title"id-data="1">{{Producto.nombre}}</h5>
+            <p class="card-text" id="price">CLP${{Producto.precio_producto}}</p>
+            <p class="card-text" >{{Producto.descripcion_producto}}</p>
             <a href="#"class="btn btn-primary mt-3 btn-color1" id="btn-add">Agregar al Carrito</a>
           </div>
         </div>
       </div>
-      {% endfor %}
-
-
       </div>
     </div>
+    {% endfor %} 
   </div>
-  <div class="container-fluid dist">
-    <div class="row row-cols-1 row-cols-md-4 row-cols-md-4 g-4" style="position:relative; top:150px; "> 
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'ad_1'%}"><img src="{% static 'menu/img/adidas court alpha.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Adidas Court Alpha</h5>
-            <p class="card-text">$67.990<br>Estas zapatillas de la marca adidas son una respuesta clásica para el futuro, inspiradas en el tenis y diseñadas para envolver tus pies en una silueta clásica. Son ideales para explorar tu propia individualidad.</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'ad_2'%}"><img src="{% static 'menu/img/adidas edge lux 2.jpg'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Adidas edge lux 2</h5>
-            <p class="card-text">$69.990<br>Consigue tus objetivos marcados con un diseño cómodo y flexible. Esta zapatilla de running se ha confeccionado con una horma específica para mujer que se adapta a tu pisada, incorpora la tecnología BOUNCE</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'ad_3'%}"><img src="{% static 'menu/img/bad3.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body"> 
-            <h5 class="card-title">Forum Low
-              Bad Bunny</h5>
-            <p class="card-text">$600.000<br>Las Adidas Forum Low Bad Bunny Pink Easter Egg son unas zapatillas deportivas diseñadas en colaboración con el artista urbano Bad Bunny. Estas zapatillas presentan un estilo único y llamativo con un color rosa intenso y detalles en tonos pastel...</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3 ">
-        <div class="card h-100">
-          <a href="{% url 'ad_4'%}"><img src="{% static 'menu/img/courtsmash.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Adidas Courtsmash</h5>
-            <p class="card-text">$44.990<br>Estas zapatillas tienen un diseño ligero perfecto para devolver saques complicados. Diseñadas para tenistas aficionados, incorporan un exterior de cuero sintético resistente al desgaste.</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-    <div class="container-fluid dist">
-    <div class="row row-cols-1 row-cols-md-4  g-4" style="position:relative; top:150px; "> 
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'pu_1'%}"><img src="{% static 'menu/img/puma Rs 1.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Puma RS x3 Level up</h5>
-            <p class="card-text">$36.990<br>Es una zapatilla ligera que proporciona un alto rebote en cada una de vuestras rutinas. Presenta un sistema de sujeción trenzada para mayor ajuste</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'pu_2'%}"><img src="{% static 'menu/img/Slipstream puma.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Puma slipstream</h5>
-            <p class="card-text">$89.990<br>Estas zapatillas Slipstream Lo de la segunda temporada de la colección PUMA x AMI están guiadas por la visión creativa de la marca parisina.</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'pu_3'%}"><img src="{% static 'menu/img/future rider 2.PNG'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title">Puma future rider chroma mujer</h5>
-            <p class="card-text">$89.990<br>Vuelve a pensar en tu concepto de lo que es posible con nuestra colección Future Rider, una incorporación impactante a nuestra familia de zapatillas Rider que se inspira en la tecnología.</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <a href="{% url 'pu_4'%}"><img src="{% static 'menu/img/back to school 4444.png'%}" class="card-img-top" alt="..."></a>
-          <div class="card-body">
-            <h5 class="card-title"> Puma back to school</h5>
-            <p class="card-text">$99.990<br>Las zapatillas back to school 2020 son un calzado deportivo de estilo clásico, diseñadas para un uso casual y urbano.Presentan un diseño elegante y moderno, con detalles retro que las hacen únicas.</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1">Agregar al Carrito</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {% endblock %}
-
-
+  
+  
     <footer class=" text-md-start">
                 
       <div class="container-fluid p-4 cont-foot sm-12 md-12 lg-6 xl-6 ">
