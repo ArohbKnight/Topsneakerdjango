@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, registrarse, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin, productos, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, admin, adidassnea, ad_4, ad_3, ad_2, ad_1
+from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, registrarse, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin, productos, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, adidassnea, ad_4, ad_3, ad_2, ad_1
 from menu import views
 
 
@@ -34,7 +34,7 @@ urlpatterns = [
     path('carritoadmin/',views.carritoadmin, name='carritoadmin'),
     path('carrito/',views.carrito, name='carrito'),
     path('airforce/',views.airforce, name='airforce'),
-    path('admin/',views.admin, name='admin'),
+    
     path('adidassnea/',views.adidassnea, name='adidassnea'),
     path('ad_4/',views.ad_4, name='ad_4'),
     path('ad_3/',views.ad_3, name='ad_3'),
