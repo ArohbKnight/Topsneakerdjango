@@ -106,3 +106,6 @@ def ad_2(request):
 
 def ad_1(request):
     return render (request,'menu/ad_1.html')
+
+def recuperar(request):
+    return render (request,'menu/recuperar.html')

@@ -21,27 +21,21 @@
 
          <img src="{% static 'menu/img/logo.png'%}" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
        </div>
-      <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Inicio de sesion </h1>
+      <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Recuperar contraseña </h1>
          <form action="#">
             <div class="mb-1">
                <label for="correo" class="form-label">Correo electronico</label>
                <input type="text" class="form-control" id="correo" name="correo">
-            </div>
-            <div class="mb-1">
-               <label for="password" class="form-label">Contraseña</label>
-               <input type="password" class="form-control" id="password">
             </div>
             <div class="mb-2">
                 <input type="checkbox" name="connected" class="form-check-input">
                 <label for="connected" class="form-check-label">Recuerdame</label>
                </div>
                <div class="d-grid">
-                  <input type="submit" onclick=" return entrar();" value="Iniciar sesion"> 
+                  <input type="submit" onclick=" return entrar();" value="recuperar"> 
                </div>
                <div class="my-1">
                    <span>¿No tienes cuenta?</span> <a href="{% url 'registrarse'%}">Registrarse</a></span> <br>
-                   <span><a href="{% url 'recuperar'%}">Recuperar contraseña</a></span>
-
                </div>
          </form>
 
