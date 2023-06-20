@@ -97,19 +97,19 @@
     </div>
     <div class="row">
 
-      {% for Producto in productos %}
+      {% for producto in productos %}
       
           <div class="col-md-3">
       
           <div class="card" style="width: 100%; margin: 5px 5px;">
       
-              <img src="{{Producto.imagen.url}}" class="card-img-top">
+              <img src="{{producto.imagen.url}}" class="card-img-top">
       
               <div class="card-body" style="text-align: center;">
       
-                  <h7 class="card-title">{{Producto.nombre}}</h7>
+                  <h7 class="card-title">{{producto.nombre}}</h7>
       
-                  <p class="card-text">&nbsp;${{Producto.precio_producto}}</p>
+                  <p class="card-text">&nbsp;${{producto.precio_producto}}</p>
       
       
               </div> 
