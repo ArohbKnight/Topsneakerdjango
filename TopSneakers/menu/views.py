@@ -11,7 +11,11 @@ def productos(request):
 
     return render (request,'menu/productos.html',{"productos":productos})
 
-    
+def productosadmin(request):
+
+    productos=Producto.objects.all()
+
+    return render(request,'menu/productosadmin.html',{"productosadmin":productos})   
 
 def stayloyal(request):
     return render (request,'menu/stayloyal.html')
@@ -40,8 +44,6 @@ def pu_2(request):
 def pu_1(request):
     return render (request,'menu/pu_1.html')
 
-def productosadmin(request):
-    return render (request,'menu/productosadmin.html')
 
 def privacidad(request):
     return render (request,'menu/privacidad.html')
