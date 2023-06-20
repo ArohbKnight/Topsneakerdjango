@@ -34,10 +34,7 @@ urlpatterns = [
     path('carritoadmin/',views.carritoadmin, name='carritoadmin'),
     path('carrito/',views.carrito, name='carrito'),
     path('airforce/',views.airforce, name='airforce'),
-<<<<<<< Updated upstream
     
-=======
->>>>>>> Stashed changes
     path('adidassnea/',views.adidassnea, name='adidassnea'),
     path('ad_4/',views.ad_4, name='ad_4'),
     path('ad_3/',views.ad_3, name='ad_3'),

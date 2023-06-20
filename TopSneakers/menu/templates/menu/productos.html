@@ -95,24 +95,35 @@
       </div>
     </div>
     </div>
-    
-    <div class="container-fluid dist">
-      {%for Producto in productos %}
-    <div class="row row-cols-1 row-cols-md-4 g-4" style="position:relative; top:150px; "> 
-      <div class="col sm-12 md-3 lg-3 xl-3">
-        <div class="card h-100">
-          <img src="{{Producto.imagen.url}}" class="card-img-top" alt="..."> 
-          <div class="card-body">
-            <h5 class="card-title"id-data="1">{{Producto.nombre}}</h5>
-            <p class="card-text" id="price">CLP${{Producto.precio_producto}}</p>
-            <p class="card-text" >{{Producto.descripcion_producto}}</p>
-            <a href="#"class="btn btn-primary mt-3 btn-color1" id="btn-add">Agregar al Carrito</a>
-          </div>
+    <div class="row">
+
+      {% for Producto in productos %}
+      
+          <div class="col-md-3">
+      
+          <div class="card" style="width: 100%; margin: 5px 5px;">
+      
+              <img src="{{Producto.imagen.url}}" class="card-img-top">
+      
+              <div class="card-body" style="text-align: center;">
+      
+                  <h7 class="card-title">{{Producto.nombre}}</h7>
+      
+                  <p class="card-text">&nbsp;${{Producto.precio_producto}}</p>
+      
+      
+              </div> 
+              
+              <div class="card-footer text-center">
+      
+                  <a href="" class="btn btn-success">Agregar al carro</a>
+      
+              </div>
+      
+          </div><!--card que se cierra-->
+          
         </div>
-      </div>
-      </div>
-    </div>
-    {% endfor %} 
+        {% endfor %}
   </div>
   
   
