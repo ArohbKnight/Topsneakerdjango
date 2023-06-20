@@ -115,3 +115,5 @@ def ad_1(request):
 
 def recuperar(request):
     return render (request,'menu/recuperar.html')
+def admin(request):
+    return render (request,'menu/admin.html')
