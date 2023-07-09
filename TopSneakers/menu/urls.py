@@ -7,7 +7,6 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
-
 urlpatterns = [
     path('test/',views.test, name='test'),
     path('stayloyal/',views.stayloyal, name="stayloyal"),
@@ -47,7 +46,8 @@ urlpatterns = [
     path('ad_2/',views.ad_2, name='ad_2'),
     path('ad_1/',views.ad_1, name='ad_1'), 
     path('recuperar/',views.recuperar, name='recuperar'),  
-     path('admin/',views.admin, name='admin') 
+    path('admin/',views.admin, name='admin'), 
+    path('carro/',include('carro.urls'))
 
     
 ]

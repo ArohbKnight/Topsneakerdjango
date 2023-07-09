@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from .carro import Carro
 
-from .models import Producto
+from menu.models import Producto
 
 from django.shortcuts import redirect
 
