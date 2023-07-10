@@ -1,7 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Producto
+from django.views.generic import View
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 
 # Create your views here.
+
+class Vregistro(View):
+    
+    def get(self, request):
+        form=UserCreationForm()
+        return render(request, "menu/registrarse.html",{"form":form})
+
+    def post(self, request):
+        form=UserCreationForm(request.POST)
+
+        if form.is_valid():
+
+            usuario=form.save()
+
+            login(request, usuario)
+
+            return redirect('test.html')
+        
+        else:
+            pass
+
+
+
 def test(request):
     return render (request,'menu/test.html')
 
@@ -26,8 +52,6 @@ def sobrenosotrosadmin(request):
 def sobrenosotros(request):
     return render (request,'menu/sobrenosotros.html')
 
-def registrarse(request):
-    return render (request,'menu/registrarse.html')
 
 def pumasnea(request):
     return render (request,'menu/pumasnea.html')

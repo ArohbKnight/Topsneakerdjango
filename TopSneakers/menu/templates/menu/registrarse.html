@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,39 +27,17 @@
          <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Registrarse</h1>
           <h3>Crea tu cuenta</h3>
           <!--Inicio de formulario-->
-         <form action="#">
-            <div class="mb-1">
-               <label for="nombre" class="form-label">Nombre completo</label>
-               <input type="text" class="form-control"  id="nombre">
-            </div>
-            <div class="mb-1">
-                <label for="rut" class="form-label">Rut</label>
-                <input type="text" class="form-control" id="rut">
-             </div>
-            <div class="mb-1">
-               <label for="email" class="form-label">Correo</label>
-               <input type="email" class="form-control" id="email">
-            </div>
-            <div class="mb-1">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password">
-             </div>
-             <div class="mb-1">
-              <label for="password" class="form-label">Confirmar contraseña</label>
-              <input type="password" class="form-control" id="password">
-           </div>
-            <div class="mb-2">
-                <input type="checkbox" name="connected" class="form-check-input">
-                <label for="connected" class="form-check-label">Recuerdame</label>
-               </div>
-               <div class="mb-3">
-               <div class="g-recaptcha " data-sitekey="6Lde4tIlAAAAAM8YQ6qeq9SdyKyoQezSqVrWvG1_"></div>
+          <form method="post" action="">
 
-               </div>
-               <div class="d-grid">
-                   <input type="submit" onclick=" return crearcuenta();" value="Crear cuenta">
-               </div>
-               <div class="my-1">
+            {% csrf_token %}
+
+            {{form}}
+
+            <button type="submit" class="btn btn-success">Regístrate</button>
+            
+          </form>
+
+
                    <span>¿Ya tienes cuenta?</span> <a href="{% url 'iniciosesion'%}">Ya tengo cuenta</a></pan> <br>
                    
                </div>

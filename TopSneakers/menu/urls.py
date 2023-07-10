@@ -1,18 +1,20 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, registrarse, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin,productos, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, adidassnea, ad_4, ad_3, ad_2, ad_1, modificar, recuperar,admin
+from .views import test, stayloyal, sobrenosotrosadmin, sobrenosotros, pumasnea, pu_4, pu_3, pu_2, pu_1, productosadmin,productos, privacidad, perfil, perfiladmin, pago, nikesnea, menuadmin, jordansmoke, jordanair1mid, iniciosesion, inicioadmin, histoordenes, envioypago, elegir, contactosadmin, contactanos, carritoadmin, carrito, airforce, adidassnea, ad_4, ad_3, ad_2, ad_1, modificar, recuperar,admin
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+from .views import Vregistro
 
 
 urlpatterns = [
+    
+    path('registrarse',Vregistro.as_view(), name='registrarse'),
     path('test/',views.test, name='test'),
     path('stayloyal/',views.stayloyal, name="stayloyal"),
     path('sobrenosotrosadmin/',views.sobrenosotrosadmin, name='sobrenosotrosadmin'),
     path('sobrenosotros/',views.sobrenosotros, name='sobrenosotros'),
-    path('registrarse/',views.registrarse, name='registrarse'),
     path('pumasnea/',views.pumasnea, name='pumasnea'),
     path('pu_4/',views.pu_4, name='pu_4'),
     path('pu_3/',views.pu_3, name='pu_3'),
@@ -20,7 +22,6 @@ urlpatterns = [
     path('pu_1/',views.pu_1, name='pu_1'),
     path('productosadmin/',views.productosadmin, name='productosadmin'),
     path('productos/',views.productos, name='productos'),
-    
     path('privacidad/',views.privacidad, name='privacidad'),
     path('perfil/',views.perfil, name='perfil'),
     path('perfiladmin/',views.perfiladmin, name='perfiladmin'),
