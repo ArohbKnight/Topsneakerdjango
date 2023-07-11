@@ -3,23 +3,24 @@ from .models import Producto
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from .forms import CustomUserCreationForm
 
 # Create your views here.
-
-class Vregistro(View):
     
-    def get(self, request):
-        form=UserCreationForm()
-        return render(request, "menu/registrarse.html",{"form":form})
+def registrarse(request):
+    data = {
+        'form': CustomUserCreationForm()
+    }
+    return render(request, 'menu/registrarse.html', data)
 
-    def post(self, request):
+def post(self, request):
         form=UserCreationForm(request.POST)
 
         if form.is_valid():
 
-            usuario=form.save()
+            Usuario=form.save()
 
-            login(request, usuario)
+            login(request, Usuario)
 
             return redirect('test.html')
         
