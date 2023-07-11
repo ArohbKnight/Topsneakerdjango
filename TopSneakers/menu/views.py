@@ -144,3 +144,5 @@ def recuperar(request):
     return render (request,'menu/recuperar.html')
 def admin(request):
     return render (request,'menu/admin.html')
+def agadmin(request):
+    return render (request,'menu/agadmin.html')

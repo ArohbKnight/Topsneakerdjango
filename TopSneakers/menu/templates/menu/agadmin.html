@@ -1,0 +1,58 @@
+{% extends 'menu/plant_admin.html'%}
+{% load static %}
+{% block titulo %}admin {% endblock %}
+{% block relleno %}
+<div class="container w-75 bg-light mt-5 rounded shadow rounded-end p-5" style="position:relative; top:70px;"
+>
+  <div class="row align-items-stretch">
+    
+      <div class="text-end" >
+         
+      </div>
+      <div class="container-fluid color-container1 ">
+
+      </div>
+
+      <div class="d-flex  justify-content-center my-n2">
+
+         <img src="{% static 'menu/img/logo.png'%}" class="img-fluid my-n1" style="position:relative; top:-50px;" alt="" width="250">
+       </div>
+      <h1 class="fw-bold text-center py-n5" style="position:relative; top:-50px;"> Agregar Producto</h1>
+       <form action="#">
+         <div class="mb-1">
+           <label for="nombre" class="form-label">Nombre de zapatilla:</label>
+           <input type="text" class="form-control"  id="nombre">
+        </div>
+           <div class="mb-1">
+             <label for="modelo" class="form-label">Modelo:</label>
+             <input type="text" class="form-control" id="form-control" name="Modelo">
+          </div>
+          <div class="mb-1">
+            <label for="Talla" class="form-label">Talla:</label>
+            <input type="text" class="form-control" id="form-control" name="Talla">
+         </div>
+         <div class="mb-1">
+            <label for="Precio" class="form-label">Precio:</label>
+            <input type="text" class="form-control" id="form-control" name="Precio">
+         </div>
+         <div class="mb-1">
+            <label for="Descripcion" class="form-label">Descripcion:</label>
+            <input type="text" class="form-control" id="form-control" name="Descripcion">
+         </div>
+          <div class="mb-1">
+           <label for="imagen">Imagen:</label>
+           <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+        </div>
+            <br>
+              <div class="d-grid">
+               <input type="submit" onclick=" return Enviar();" value="Agregar Producto"> 
+              </div>
+        </form>
+
+     </div>
+     <div class="col">
+
+     </div>
+  </div>
+</div>
+          {% endblock %}   
